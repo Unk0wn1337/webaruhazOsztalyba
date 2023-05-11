@@ -1,4 +1,12 @@
-import termek from "./termek.js";
+import Aszinkron from "./aszinkron.js";
+import Termekek from "./termekek.js";
 $(function () {
-    new termek()
+   const aszinkron = new Aszinkron();
+   aszinkron.adatbe("adat.json",beolvasas)
+
+
 })
+function beolvasas(adat){
+console.log(adat.adatLISTA);
+new Termekek(adat.adatLISTA);
+}
